@@ -1,0 +1,35 @@
+
+
+
+[
+    {
+        "name": "Nice & lovely 400ml",
+        "description": "lotion",
+        "price": 280.0,
+        "costprice": 0.0
+    },
+    {
+        "name": "Nice & lovely 200ml",
+        "description": "lotion",
+        "price": 170.0,
+        "costprice": 0.0
+    },
+    {
+        "name": "Venus(cussons) 125ml",
+        "description": "lotion",
+        "price": 100.0,
+        "costprice": 0.0
+    },
+    {
+        "name": "Vaseline lotion 200ml",
+        "description": "lotion",
+        "price": 320.0,
+        "costprice": 0.0
+    },
+    {
+        "name": "Nivea(Cool Kick) 200ml",
+        "description": "lotion",
+        "price": 350.0,
+        "costprice": 0.0
+    }
+]

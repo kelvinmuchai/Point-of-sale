@@ -1,0 +1,16 @@
+{% extends 'inventory/base.html' %}
+{% block content %}
+   
+      <div class="container d-flex justify-content-center align-items-center" style="height: 100vh;">
+         <form method="post" class="card p-4 shadow" style="min-width: 300px;">
+             {% csrf_token %}
+             <h2 class="text-center mb-3">Login</h2>
+             {{ form.as_p }}
+             <button type="submit" class="btn btn-primary w-100">Login</button>
+            <div class="container d-flex"> 
+                <p class="text-justify" style="font-size:small;">Don't have an account</p>
+                <a style="font-size:small;" href="{%url 'register'%}">Sign up</a></div>
+         </form>
+     </div>
+
+{% endblock %} 

@@ -1,0 +1,71 @@
+
+{%extends 'inventory/base.html'%}
+{%block content%}
+{%if searched%}
+
+<h1>
+
+   
+    {%if products%} 
+  
+  {%for product in products%}
+ 
+   
+  
+<div id="main"  >
+    <a href="{% url 'product-detail' product.pk %}">
+     
+          
+        <div id="items-container">
+          
+            
+            <div id="image-part">
+                <img src="{{ product.p_image.url }}" alt="Product here" width="185" height="185" >
+    
+            </div>
+            <div id="description">
+            
+                <p>{{product.p_description}}</p>
+            
+             
+            </div>
+    
+         
+            <div id="price">
+                <p>KSh {{product.p_price}} </p>
+             
+            </div>
+    
+            <div id="edit-btn">
+    
+            </div>
+            
+    
+    
+    
+       
+        </div>
+     
+        </a>
+    
+    
+</div>
+
+
+    {%endfor %}
+    {%else%}
+    <h2>Item not found </h2>
+
+    {%endif%}
+
+ 
+
+</div>
+
+   
+</div>
+
+{%endif%}
+
+     
+{%endblock%}

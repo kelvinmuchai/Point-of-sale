@@ -1,0 +1,407 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+body
+{
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    background-color:#E6DAD5;
+    color:#330000;
+    height: 100%;
+    
+}
+body header{
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    background-color:#E6DAD5;
+    padding:10px 0;
+    height: 60px;
+    z-index: 1;
+    color:  black;
+   
+
+   
+   
+}
+
+body  header #logo{
+    padding: 5px;
+    font-size: 10px;
+    font-family: bignoodletitling;   
+    letter-spacing: 1px;
+    white-space: nowrap;
+ }
+
+ body header #search{
+    display: flex;
+    gap: 2px;
+  
+    
+
+ }
+body header #search input{
+
+    padding: 5px;
+    border-radius: 5px;
+    border: rgba(240, 233, 233, 0#856);
+    
+}
+
+body header #search button{
+    background-color: #ffffff;
+   
+    
+    padding: 5px;
+    border-radius: 5px;
+    border: black;
+}
+
+
+body header nav ul{
+     
+    list-style-type:none;
+    display: inline-flex;
+    padding:5px;
+    gap: 10px;
+    
+}
+
+
+
+body header nav ul li a{
+    white-space: nowrap;
+    text-decoration: none;
+    font-size: medium;
+    color:black;
+    font-family: airelon,simplifica;
+}
+ 
+
+
+
+
+
+ #main-content{
+    
+    
+
+    height: 100vh;
+    margin-top: 70px;
+
+  
+}
+
+
+ #main-content #main {
+    display: inline-flex;
+    flex-wrap: wrap;
+    
+    width: 100%;
+   
+    padding: 15px;
+    border-radius: 3px;
+   
+    
+  
+    
+}
+
+body #container{
+    height: 100%;
+}
+
+#detail-container{
+    margin: 10px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    
+}
+
+
+#sidebar nav ul{
+    list-style-type:none;
+    text-align: center;
+}
+
+#main  #items-container{
+   
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 190px;
+    height: 350px;
+    padding-bottom: 10px;
+    gap:0px;
+    border-radius: 8px;
+    background-color:rgba(255, 255, 255, 0.685);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    text-transform: capitalize;
+    margin: 10px;
+    
+}
+
+#items-container #product-name{
+    display: flex;
+    gap: 10px;
+}
+
+#items-container #image-part img{
+    border-radius: 8px;
+    
+   
+    
+}
+
+#main a{
+    
+    text-decoration: none;
+    color: black;
+    font-size: large;
+    transition:scale 0.4s ease-in-out 0.1s ;
+
+}
+
+#main #name{
+    font-size: medium;
+    display: -webkit-box;
+    -webkit-line-clamp: 1; /* Number of lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+
+}
+#main #description{
+    font-size: medium;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Number of lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+
+}
+
+#main #price{
+    font-size: 10px;
+}
+
+#main a:hover{
+    scale: 1.04;
+
+}
+
+main #categories{
+   
+    
+   background-color:white;
+   margin: 10px;
+   padding: 15px;
+   border: 1px black solid;
+   border-radius: 10px;
+  
+   
+}
+
+main #categories #category-products #main{
+    display: flex;
+    
+    
+}
+
+main #category-name{
+    text-transform: capitalize;
+    border-bottom: 2px solid black;
+}
+
+/*Add product form styling*/
+main #reg{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    
+    
+    
+
+}
+
+
+
+main #categories #subcategory{
+    background-color: orange;
+    border: 1px black solid;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+main #reg #forms{
+
+    
+    background-color: #FAF7F5;
+    position: fixed;
+    width: fit-content;
+    left: 50;
+    padding: 20px;
+    border-radius: 10px;
+    
+    
+}
+
+footer {
+    background: #263238;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    position: relative;
+    bottom: 0px;
+    width: 100%;
+  
+}
+
+footer p {
+    margin-bottom: 8px;
+}
+
+a#footer-link {
+    color: #90caf9;
+    text-decoration: none;
+}
+
+main #reg form{
+   
+    
+  
+   display: flex;
+   flex-direction: column;
+    gap: 5px;
+   font-size: large;
+   padding: 5px;
+   color: #330000;
+}
+main #reg form input{
+    padding: 5px;
+    font-size: medium;
+    margin: 0 3px;
+    border-radius: 2px;
+}
+
+main #reg form textarea{
+    width: 100%;
+    min-height: 150px;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    resize: vertical; /* allow vertical resizing only */
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+    
+
+}
+main #reg form textarea:focus{
+     border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0,123,255,0.5);
+}
+main #reg form #form-btns{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main #reg form #form-btns button{
+    width: 70px;
+    
+  padding: 5px;
+  background-color: white;
+  
+  
+
+
+}
+
+main #reg form #form-btns a{
+    padding: 5px;
+    text-decoration: none;
+    font-size: small;
+    
+    background-color: #ffffff;
+    border-radius: 3px;
+}
+
+
+
+
+
+
+
+
+#delete{
+    width: 100%;
+    height: 100vh;
+  position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 150px;
+    
+}
+
+#delete form{
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px black solid;
+    border-radius: 5px;
+    padding: 8px;
+
+
+}
+
+#delete form #deletebtns{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+#delete form #deletebtns button{
+    width: 200px;
+    text-align: center;
+    padding: 6px;
+    border-radius: 5px;
+}
+
+#delete form #deletebtns a{
+    width: 200px;
+    text-align: center;
+}
+
+
+
+
+.invoice-table input,
+.invoice-table select {
+  border: none;
+  background-color: #fff9dc;
+  width: 100%;
+}
+.invoice-table td {
+  vertical-align: middle;
+}
+.remove-btn {
+  color: red;
+  font-size: 1.2rem;
+  cursor: pointer;
+}

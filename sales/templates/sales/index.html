@@ -1,0 +1,90 @@
+{% extends 'inventory/base.html' %}
+
+{%block content%}
+
+
+<div class="container mt-4">
+    <div class="table-responsive">
+      <table class="table table-bordered invoice-table align-middle">
+        <thead class="table-light text-center">
+          <tr>
+            <th>Item</th>
+            <th>Description</th>
+            <th>Unit Price</th>
+            <th>Quantity</th>
+            <th>Discount</th>
+            <th>Tax 1</th>
+            <th>Subtotal</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Item Row -->
+          <tr>
+            <td>
+              <select>
+                <option>Item</option>
+                <option>Item A</option>
+                <option>Item B</option>
+              </select>
+            </td>
+            <td><input type="text" placeholder="Description"></td>
+            <td><input type="number" placeholder="Unit Price"></td>
+            <td><input type="number" placeholder="Quantity"></td>
+            <td class="d-flex">
+              <input type="number" placeholder="Disc." class="me-1"><span class="mt-2">%</span>
+            </td>
+            <td>
+              <select>
+                <option>Tax 1</option>
+                <option>0%</option>
+                <option>16%</option>
+              </select>
+            </td>
+            <td>Ksh 0.00</td>
+            <td class="text-center">
+              <span class="remove-btn">&minus;</span>
+            </td>
+          </tr>
+          <!-- Repeat for more rows -->
+          <tr>
+            <td>
+              <select>
+                <option>Item</option>
+                <option>Item A</option>
+                <option>Item B</option>
+              </select>
+            </td>
+            <td><input type="text" placeholder="Description"></td>
+            <td><input type="number" placeholder="Unit Price"></td>
+            <td><input type="number" placeholder="Quantity"></td>
+            <td class="d-flex">
+              <input type="number" placeholder="Disc." class="me-1"><span class="mt-2">%</span>
+            </td>
+            <td>
+              <select>
+                <option>Tax 1</option>
+                <option>0%</option>
+                <option>16%</option>
+              </select>
+            </td>
+            <td>Ksh 0.00</td>
+            <td class="text-center">
+              <span class="remove-btn">&minus;</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <!-- Add Button -->
+      <button class="btn btn-outline-primary">
+        <span class="me-1">+</span> Add
+      </button>
+    </div>
+  
+    <!-- Totals Box -->
+    <div class="mt-3 float-end text-end">
+      <div><strong>Items Total:</strong> Ksh 0.00</div>
+      <div><strong>Total:</strong> Ksh 0.00</div>
+    </div>
+  </div>
+{%endblock%}

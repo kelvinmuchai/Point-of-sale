@@ -1,0 +1,19 @@
+{%extends 'inventory/base.html'%}
+{%load crispy_forms_tags%}
+{%block content%}
+  <div id="delete">
+    <form  method="POST" enctype="multipart/form-data">
+      
+            {% csrf_token %}
+            <h1 >Are you sure you want to delete "{{object.p_name}}"</h1>
+          
+          <div id="deletebtns">
+            <button  class="btn btn-outline-danger" type="submit">Delete</button>
+            <a class="btn btn-outline-success " href="{%url 'product-detail' object.id%}">cancel</a>
+
+          </div>
+     
+       </form>
+  </div>
+
+{%endblock%}

@@ -1,0 +1,17 @@
+{% extends 'inventory/base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+  
+<div class="container d-flex justify-content-center align-items-center" style="height: 100vh;">
+   <form method="post" class="card p-4 shadow" style="min-width: 300px;">
+       {% csrf_token %}
+       <h2 class="text-center mb-3">Register</h2>
+       {{ form | crispy }}
+       <button type="submit" class="btn btn-primary w-100">Register</button>
+       <div class="container d-flex"> 
+        <p class="text-justify" style="font-size:small;">Already have an account</p>
+        <a style="font-size:small;" href="{%url 'login'%}">Sign In</a></div>
+   </form>
+</div>
+
+{% endblock %}

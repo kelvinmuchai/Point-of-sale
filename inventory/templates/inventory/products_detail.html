@@ -1,0 +1,95 @@
+
+{%extends 'inventory/base.html'%}
+{%load crispy_forms_tags%}
+{%block content%}
+
+        <div class="container" id="detail-container" style="box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;">
+ 
+           <div id="image-part">
+               <img src="{{ product.p_image.url }}" alt="Product here" width="370" height="370">
+ 
+           </div>
+
+          <div class="container" id="grouping">
+            <div id="product-name">
+           
+                <p>{{product.p_name}}</p>
+                <p>Ksh {{product.p_price}}</p>
+             
+            </div>
+  
+         
+            <div id="description">
+                <p>{{product.p_description}}</p>
+             
+            </div>
+       {%if user.is_superuser%} 
+                <a  class="btn btn-outline-danger" href="{%url 'product-delete' product.pk %}" type="button">Delete</a></button>
+               <a class="btn btn-outline-success" href="{% url 'product-update' product.pk %}" type="button">Edit</a>
+  {%endif%}
+          </div>
+        
+        </div>  
+
+ 
+       
+     <div id="main" class="container" style="box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;">
+       <h1 class="container" style="border-bottom: 1px black solid;">Related Products</h1>
+        {%for product in products%}
+       
+    
+          <a href="{% url 'product-detail' product.pk %}">
+         
+              
+            <div id="items-container">
+              
+                
+                <div id="image-part">
+                    <img src="{{ product.p_image.url }}" alt="Product here" width="185" height="185" >
+        
+                </div>
+                <div id="description">
+                
+                    <p>{{product.p_description}}</p>
+                
+                 
+                </div>
+        
+             
+                <div id="price">
+                    <p>KSh {{product.p_price}} </p>
+                 
+                </div>
+        
+                <div id="edit-btn">
+    
+                </div>
+                
+    
+        
+    
+           
+            </div>
+         
+            </a>
+     
+    
+        
+        
+    
+      
+       
+            
+            
+           
+         
+      
+    
+    
+            {%endfor %}
+        
+    </div> 
+    
+    
+     
+{%endblock%}
