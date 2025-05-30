@@ -26,7 +26,10 @@
           </li>
           {% endif %}
           <li class="nav-item">
-            <a class="nav-link  active" aria-current="page" href="{%url 'home-page'%}">Home</a>
+            <a class="nav-link  active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link  active" aria-current="page" href="{%url 'home-page'%}">Products</a>
           </li>
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="{%url 'dashboard'%}">Dashboard</a>
@@ -41,6 +44,7 @@
               <li><a class="dropdown-item" href="#">Add Product</a></li>
               <li><a class="dropdown-item" href="#">New category</a></li>
              
+
             </ul>
           </li>
           {% if user.is_superuser %}
@@ -52,7 +56,8 @@
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="{%url 'create-product'%}">Add Product</a></li>
               <li><a class="dropdown-item" href="{%url 'newcategory'%}">New category</a></li>
-             
+              <li><a class="dropdown-item" href="#">suppliers</a></li>
+
             </ul>
            
           </li>
@@ -113,11 +118,51 @@
           {% block content %}
 
           {% endblock %}
+          <!-- Footer -->
+
 
       </main>
 
 
-
+      <footer class="bg-dark text-white text-center text-lg-start mt-5">
+        <div class="container p-4">
+          <div class="row">
+            
+            <!-- About Section -->
+            <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+              <h5 class="text-uppercase">MyShop</h5>
+              <p>
+                Your trusted place for quality products and amazing deals. We value every customer.
+              </p>
+            </div>
+      
+            <!-- Links -->
+            <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+              <h5 class="text-uppercase">Links</h5>
+              <ul class="list-unstyled mb-0">
+                <li><a href="#" class="text-white text-decoration-none">Home</a></li>
+                <li><a href="#" class="text-white text-decoration-none">Products</a></li>
+                <li><a href="#" class="text-white text-decoration-none">Sales</a></li>
+                <li><a href="#" class="text-white text-decoration-none">Contact</a></li>
+              </ul>
+            </div>
+      
+            <!-- Contact -->
+            <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+              <h5 class="text-uppercase">Contact</h5>
+              <p>Email: wangahtraders@gmail.com</p>
+              <p>Phone: +254 719 689361</p>
+              <p>Location: Githunguri, near County Pride hotel</p>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Copyright -->
+        <div class="text-center p-3 bg-secondary">
+          © 2025 MyShop. All rights reserved.
+        </div>
+      </footer>
+      
 
 <script src="{% static 'inventory/main.js' %}"></script>
 <!-- Bootstrap 5.3 JS -->

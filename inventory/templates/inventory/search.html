@@ -8,51 +8,55 @@
    
     {%if products%} 
   
-  {%for product in products%}
+
  
    
   
 <div id="main"  >
-    <a href="{% url 'product-detail' product.pk %}">
-     
+      {%for product in products%}
+            
           
-        <div id="items-container">
+<div class="container" id="items-container">
           
-            
-            <div id="image-part">
-                <img src="{{ product.p_image.url }}" alt="Product here" width="185" height="185" >
-    
-            </div>
-            <div id="description">
-            
-                <p>{{product.p_description}}</p>
-            
-             
-            </div>
-    
-         
-            <div id="price">
-                <p>KSh {{product.p_price}} </p>
-             
-            </div>
-    
-            <div id="edit-btn">
-    
-            </div>
-            
-    
-    
-    
-       
-        </div>
-     
-        </a>
-    
+        <a  href="{% url 'product-detail' product.pk %}">
+
+<div id="image-part">
+
+<img src="{{ product.p_image.url }}" alt="Product here" width="185" height="185" >
+</a>
+</div>
+<div id="name">
+
+<p>{{product.p_name}}</p>
+
+
+</div>
+
+
+<div id="price" style="font-size: medium;">
+<p>KSh {{product.p_price}} </p>
+
+</div>
+
+<div id="price">
+<p>{{product.p_stock}} items left</p>
+</div>
+
+<div id="cart">
+<button class="btn btn-warning">Add to cart</button>
+
+</div>  
+
+
+
+</div>
+
+  {%endfor %}
     
 </div>
 
 
-    {%endfor %}
+  
     {%else%}
     <h2>Item not found </h2>
 

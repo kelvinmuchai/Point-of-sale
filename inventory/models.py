@@ -27,7 +27,19 @@ class Category(models.Model):
         if self.parent:
             return f"{self.parent} > {self.name}"
         return self.name
-    
+
+class Supplier(models.Model):
+    name = models.CharField(max_length=255)
+    email = models.EmailField(blank=True, null=True)
+    phone = models.CharField(max_length=20, blank=True, null=True)
+    company_name = models.CharField(max_length=255, blank=True, null=True)
+    product_categories = models.CharField(max_length=255, help_text="e.g., electronics, groceries")
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.name
+
+        
 
 class Products(models.Model):
     p_name = models.CharField(max_length=255,unique=True)
@@ -35,7 +47,7 @@ class Products(models.Model):
     p_price = models.DecimalField(max_digits=10,decimal_places=2)
     p_image = models.ImageField(default='default.jpg',upload_to='productsimg')
     p_costprice = models.DecimalField(max_digits=10,decimal_places=2,default=0)
-
+   # supplier = models.ForeignKey(Supplier, on_delete=models.SET_NULL, null=True, related_name="products")
     p_stock = models.PositiveIntegerField(default=0)
     p_category = models.ForeignKey(
         Category,
@@ -70,8 +82,5 @@ class Products(models.Model):
 
 
 
-
-
-        
 
 
