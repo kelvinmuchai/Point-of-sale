@@ -1,0 +1,37 @@
+{%extends 'inventory/base.html'%}
+{%load crispy_forms_tags%}
+{%block content%}
+
+
+
+<table class="table table-bordered container" >
+  
+    <thead class="thead-dark">
+      <tr >
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">company_name</th>
+        <th scope="col">phone</th>
+        <th scope="col">products</th>
+      </tr>
+    </thead>
+      {%for supplier in suppliers%}
+    <tbody>
+   
+      <tr>
+        <th scope="row">{{supplier.id}}</th>
+        <td>{{supplier.name}}</td>
+        <td>{{supplier.email}}</td>
+        <td>{{supplier.company_name}}</td>
+        <td>{{supplier.phone}}</td>
+        <td>{{supplier.product_categories}}</td>
+     
+      </tr>
+  
+    
+    </tbody>
+    {%endfor%}
+  </table>
+  
+{%endblock%}

@@ -11,3 +11,5 @@ class CategoryAdmin(admin.ModelAdmin):
     search_fields = ('name',)
 
 admin.site.register(models.Products)
+
+admin.site.register(models.Supplier)

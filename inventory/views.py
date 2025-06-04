@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Products,Category
+from .models import Products,Category,Supplier
 from django.views.generic import DetailView,CreateView,UpdateView,DeleteView,ListView
 from .forms import ProductsUpdateForm
 from django.shortcuts import get_object_or_404
@@ -97,7 +97,18 @@ class CategoryCreateView(CreateView):
     fields = '__all__'
 
 
+class SupplierCreateView(CreateView):
+    model = Supplier
+    fields = '__all__'
+    success_url = reverse_lazy('home-page')
 
+
+class SupplierListView(ListView):
+    model = Supplier
+    context_object_name = 'suppliers'
+    
+def DeliveryCreateView(request):
+    return render(request, 'inventory/delivery.html', {})
 
 
     #image format

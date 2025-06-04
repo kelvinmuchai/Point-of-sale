@@ -41,10 +41,7 @@
           <li class="nav-item dropdown">
              <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Categories</a>
              <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Add Product</a></li>
-              <li><a class="dropdown-item" href="#">New category</a></li>
-             
-
+        
             </ul>
           </li>
           {% if user.is_superuser %}
@@ -56,7 +53,8 @@
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="{%url 'create-product'%}">Add Product</a></li>
               <li><a class="dropdown-item" href="{%url 'newcategory'%}">New category</a></li>
-              <li><a class="dropdown-item" href="#">suppliers</a></li>
+              <li><a class="dropdown-item" href="{%url 'new-supplier'%}">New supplier</a></li>
+              <li><a class="dropdown-item" href="{%url 'new-delivery'%}">New Order </a></li>
 
             </ul>
            
